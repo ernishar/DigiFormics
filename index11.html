@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DigiFormics | Global Affiliate Marketing & App User Acquisition</title>
+    <meta name="description" content="DigiFormics is a results-first digital marketing agency specializing in global affiliate marketing, high-volume app traffic, and scalable lead generation.">
+    <meta name="keywords" content="Affiliate Marketing, App User Acquisition, Performance Marketing, Lead Generation, Media Buying, DigiFormics">
+    <meta name="author" content="DigiFormics">
+    <link rel="canonical" href="https://www.digiformics.com/">
+
+    <meta property="og:title" content="DigiFormics | Performance Marketing Agency">
+    <meta property="og:description" content="Scale your brand fast through global affiliate marketing and conversion-driven campaigns.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.digiformics.com/">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0062ff;
+            --dark-bg: #111111;
+            --light-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Navigation */
+        .navbar {
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.9) !important;
+            padding: 0.6rem 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Section Styling */
+        section { padding: 100px 0; }
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Service Cards */
+        .service-box {
+            padding: 40px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            height: 100%;
+            border-bottom: 3px solid transparent;
+        }
+        .service-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+        .service-box i {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: var(--light-gray);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: #888;
+            padding: 50px 0 20px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            section { padding: 60px 0; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DigiFormics",
+      "url": "https://www.digiformics.com/",
+      "logo": "URL_TO_YOUR_LOGO",
+      "description": "A results-first digital marketing agency built to scale brands fast through global affiliate marketing.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Global"
+      }
+    }
+    </script>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">DigiFormics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#traffic">Traffic</a></li>
+                    <li class="nav-item"><a class="nav-link ms-lg-3 btn btn-primary text-white" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="display-2 fw-bold mb-3">Scale Your Brand Fast</h1>
+                    <p class="lead mb-5 fs-4">We turn marketing spend into predictable growth through global affiliate marketing and Relentless Optimization.</p>
+                    <a href="#services" class="btn btn-primary btn-lg px-5 py-3">Explore Our Services</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title text-start mb-4">About Us</h2>
+                    <p class="fs-5">We are a <strong>results-first digital marketing agency</strong> built to scale brands fast through global affiliate marketing. Our focus is simple: growth, performance, and ROI.</p>
+                    <p class="text-muted">With a proven track record across worldwide markets, we specialize in high-volume app traffic, scalable lead generation, and conversion-driven performance campaigns. We don’t chase vanity metrics — we deliver real users and measurable revenue impact.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-primary text-white p-5 rounded-4 shadow-lg">
+                        <h4 class="fw-bold mb-3">Our Mission</h4>
+                        <p class="mb-0 opacity-75">From rapid app scaling to aggressive user acquisition, we help brands break growth ceilings and dominate their acquisition channels globally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Our Team</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead">Our team is made up of performance marketers, affiliate growth specialists, media buyers, and data-driven strategists who live and breathe scale.</p>
+                    <p class="text-muted">We don’t just manage campaigns — we optimize, test, and push limits every day to unlock growth across global markets. Every strategy is backed by data and every decision by performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container text-center">
+            <h2 class="section-title">Our Core Services</h2>
+            <div class="row g-4 mt-2">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <h3>Global Affiliate Marketing</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h3>App User Acquisition</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <h3>Performance Lead Gen</h3>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-box">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h3>Media Buying & Scaling</h3>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-box">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <h3>Data & Conversion Optimization</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="traffic" class="bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title text-start text-white">Our Traffic Inventory</h2>
+                    <p class="lead opacity-75">We operate with premium, high-scale traffic inventory across global markets, built through long-term affiliate partnerships.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card bg-secondary text-white border-0 p-4">
+                        <p class="mb-0">Our inventory spans mobile and web traffic, delivering consistent volume for app installs and lead generation. Every source is carefully vetted for quality and compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients">
+        <div class="container">
+            <h2 class="section-title text-center">What Our Clients Say</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <p class="fst-italic">"A true performance partner. Their affiliate-driven approach helped us scale app installs globally while maintaining strong retention and ROI."</p>
+                        <h6 class="fw-bold">— App Scale Client</h6>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <p class="fst-italic">"Quality traffic at real scale. The leads converted consistently and met our KPIs across multiple markets."</p>
+                        <h6 class="fw-bold">— E-commerce Brand</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="text-white fw-bold">DigiFormics</h4>
+                    <p>Turning marketing spend into predictable growth through data-driven performance strategies.</p>
+                </div>
+                <div class="col-lg-4 mb-4 text-center">
+                    <h4 class="text-white fw-bold">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="text-decoration-none text-muted">About</a></li>
+                        <li><a href="#services" class="text-decoration-none text-muted">Services</a></li>
+                        <li><a href="#traffic" class="text-decoration-none text-muted">Traffic</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4 text-lg-end">
+                    <h4 class="text-white fw-bold">Connect</h4>
+                    <div class="fs-3">
+                        <i class="fab fa-linkedin me-3"></i>
+                        <i class="fab fa-twitter me-3"></i>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <p class="text-center mb-0">&copy; 2026 DigiFormics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // 1. Change Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled', 'bg-dark');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('scrolled', 'bg-dark');
+                nav.classList.add('bg-transparent');
+            }
+        });
+
+        // 2. Active Link Switching (Manual fix for certain browsers)
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.navbar-collapse').classList.remove('show');
+            });
+        });
+
+        // 3. Simple Form Submission Alert (Can be expanded)
+        document.querySelectorAll('a[href="#contact"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                console.log("Contact button clicked - SEO tracking enabled");
+            });
+        });
+    </script>
+</body>
+</html>
