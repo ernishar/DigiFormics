@@ -3,330 +3,398 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiFormics | Global Performance Architecture</title>
     
-    <title>DigiFormics | Global Affiliate Marketing & App User Acquisition</title>
-    <meta name="description" content="DigiFormics is a results-first digital marketing agency specializing in global affiliate marketing, high-volume app traffic, and scalable lead generation.">
-    <meta name="keywords" content="Affiliate Marketing, App User Acquisition, Performance Marketing, Lead Generation, Media Buying, DigiFormics">
-    <meta name="author" content="DigiFormics">
-    <link rel="canonical" href="https://www.digiformics.com/">
-
-    <meta property="og:title" content="DigiFormics | Performance Marketing Agency">
-    <meta property="og:description" content="Scale your brand fast through global affiliate marketing and conversion-driven campaigns.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.digiformics.com/">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         :root {
-            --primary-color: #0062ff;
-            --dark-bg: #111111;
-            --light-gray: #f8f9fa;
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --dark-bg: #030305;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --accent-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: #333;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--dark-bg);
+            color: #d1d1d6;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        /* Smooth Scroll */
-        html { scroll-behavior: smooth; }
+        /* Particles Overlay */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
 
-        /* Navigation */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--dark-bg);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Typography */
+        .text-gradient {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* Navbar */
         .navbar {
-            padding: 1rem 0;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            padding: 20px 0;
+            background: transparent;
         }
         .navbar.scrolled {
-            background: rgba(0, 0, 0, 0.9) !important;
-            padding: 0.6rem 0;
+            background: rgba(3, 3, 5, 0.9);
+            backdrop-filter: blur(15px);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
-                        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        /* Section Styling */
-        section { padding: 100px 0; }
-        .section-title {
-            font-weight: 700;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background: var(--primary-color);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* Service Cards */
-        .service-box {
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
             padding: 40px;
-            border-radius: 12px;
-            background: #fff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: 0.3s;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             height: 100%;
-            border-bottom: 3px solid transparent;
         }
-        .service-box:hover {
+        .glass-card:hover {
             transform: translateY(-10px);
-            border-color: var(--primary-color);
-        }
-        .service-box i {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
-        /* Testimonials */
-        .testimonial-card {
-            background: var(--light-gray);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 20px;
+        /* Buttons */
+        .btn-glow {
+            background: var(--accent-gradient);
+            color: #fff !important;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+            transform: scale(1.05);
         }
 
-        /* Footer */
-        footer {
-            background: var(--dark-bg);
-            color: #888;
-            padding: 50px 0 20px;
+        /* Stats Section */
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            section { padding: 60px 0; }
+        /* Hero Image Animation */
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        /* Form Styling */
+        .form-control, .form-select {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border-color);
+            color: white !important;
+            padding: 12px;
+        }
+        .form-control:focus, .form-select:focus {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--primary);
+            box-shadow: none;
+        }
+        option { background: #111; color: white; }
+
+        /* Responsive Fixes */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: rgba(3, 3, 5, 0.98);
+                padding: 20px;
+                border-radius: 20px;
+                margin-top: 15px;
+                border: 1px solid var(--border-color);
+            }
         }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "DigiFormics",
-      "url": "https://www.digiformics.com/",
-      "logo": "URL_TO_YOUR_LOGO",
-      "description": "A results-first digital marketing agency built to scale brands fast through global affiliate marketing.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "Global"
-      }
-    }
-    </script>
 </head>
-<body data-bs-spy="scroll" data-bs-target=".navbar">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand fw-bold fs-3" href="#">DigiFormics</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#traffic">Traffic</a></li>
-                    <li class="nav-item"><a class="nav-link ms-lg-3 btn btn-primary text-white" href="#contact">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="preloader">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
 
-    <header class="hero">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <h1 class="display-2 fw-bold mb-3">Scale Your Brand Fast</h1>
-                    <p class="lead mb-5 fs-4">We turn marketing spend into predictable growth through global affiliate marketing and Relentless Optimization.</p>
-                    <a href="#services" class="btn btn-primary btn-lg px-5 py-3">Explore Our Services</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div id="particles-js"></div>
 
-    <section id="about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="section-title text-start mb-4">About Us</h2>
-                    <p class="fs-5">We are a <strong>results-first digital marketing agency</strong> built to scale brands fast through global affiliate marketing. Our focus is simple: growth, performance, and ROI.</p>
-                    <p class="text-muted">With a proven track record across worldwide markets, we specialize in high-volume app traffic, scalable lead generation, and conversion-driven performance campaigns. We don’t chase vanity metrics — we deliver real users and measurable revenue impact.</p>
-                </div>
-                <div class="col-lg-6">
-                    <div class="bg-primary text-white p-5 rounded-4 shadow-lg">
-                        <h4 class="fw-bold mb-3">Our Mission</h4>
-                        <p class="mb-0 opacity-75">From rapid app scaling to aggressive user acquisition, we help brands break growth ceilings and dominate their acquisition channels globally.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="bg-light">
-        <div class="container text-center">
-            <h2 class="section-title">Our Team</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <p class="lead">Our team is made up of performance marketers, affiliate growth specialists, media buyers, and data-driven strategists who live and breathe scale.</p>
-                    <p class="text-muted">We don’t just manage campaigns — we optimize, test, and push limits every day to unlock growth across global markets. Every strategy is backed by data and every decision by performance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container text-center">
-            <h2 class="section-title">Our Core Services</h2>
-            <div class="row g-4 mt-2">
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <i class="fa-solid fa-earth-americas"></i>
-                        <h3>Global Affiliate Marketing</h3>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <h3>App User Acquisition</h3>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <i class="fa-solid fa-bullseye"></i>
-                        <h3>Performance Lead Gen</h3>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-box">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <h3>Media Buying & Scaling</h3>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-box">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
-                        <h3>Data & Conversion Optimization</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="traffic" class="bg-dark text-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="section-title text-start text-white">Our Traffic Inventory</h2>
-                    <p class="lead opacity-75">We operate with premium, high-scale traffic inventory across global markets, built through long-term affiliate partnerships.</p>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card bg-secondary text-white border-0 p-4">
-                        <p class="mb-0">Our inventory spans mobile and web traffic, delivering consistent volume for app installs and lead generation. Every source is carefully vetted for quality and compliance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="clients">
-        <div class="container">
-            <h2 class="section-title text-center">What Our Clients Say</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <p class="fst-italic">"A true performance partner. Their affiliate-driven approach helped us scale app installs globally while maintaining strong retention and ROI."</p>
-                        <h6 class="fw-bold">— App Scale Client</h6>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <p class="fst-italic">"Quality traffic at real scale. The leads converted consistently and met our KPIs across multiple markets."</p>
-                        <h6 class="fw-bold">— E-commerce Brand</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h4 class="text-white fw-bold">DigiFormics</h4>
-                    <p>Turning marketing spend into predictable growth through data-driven performance strategies.</p>
-                </div>
-                <div class="col-lg-4 mb-4 text-center">
-                    <h4 class="text-white fw-bold">Quick Links</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#about" class="text-decoration-none text-muted">About</a></li>
-                        <li><a href="#services" class="text-decoration-none text-muted">Services</a></li>
-                        <li><a href="#traffic" class="text-decoration-none text-muted">Traffic</a></li>
+    <div class="content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-3" href="#">
+                    <span class="text-primary">Digi</span>Formics
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto gap-lg-4 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Tech</a></li>
+                        <li class="nav-item"><a class="btn-glow" href="#contact">Get Free Audit</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 mb-4 text-lg-end">
-                    <h4 class="text-white fw-bold">Connect</h4>
-                    <div class="fs-3">
-                        <i class="fab fa-linkedin me-3"></i>
-                        <i class="fab fa-twitter me-3"></i>
-                        <i class="fa-solid fa-envelope"></i>
+            </div>
+        </nav>
+
+        <header class="hero d-flex align-items-center" style="min-height: 100vh; padding-top: 80px;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7" data-aos="fade-up">
+                        <span class="badge rounded-pill px-3 py-2 mb-4" style="background: rgba(0, 210, 255, 0.1); border: 1px solid var(--primary); color: var(--primary);">
+                            <i class="fa-solid fa-bolt me-2"></i>2026 PERFORMANCE ARCHITECTURE
+                        </span>
+                        <h1 class="display-2 fw-800 mb-4" style="font-weight: 800;">Mastering <span class="text-gradient">Acquisition</span> At Scale</h1>
+                        <p class="lead opacity-75 fs-4 mb-5">High-volume traffic meets precision data. We help global brands acquire high-LTV users through proprietary SDK inventory.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#contact" class="btn-glow">Scale Your Brand</a>
+                            <a href="#process" class="btn btn-outline-light rounded-pill px-4">Our Methodology</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block text-center" data-aos="zoom-in">
+                        <div class="floating">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png" class="img-fluid" alt="Tech" style="max-width: 80%; filter: drop-shadow(0 0 30px rgba(0,210,255,0.3));">
+                        </div>
                     </div>
                 </div>
             </div>
-            <hr class="mt-4 border-secondary">
-            <p class="text-center mb-0">&copy; 2026 DigiFormics. All rights reserved.</p>
+        </header>
+
+        <div class="container mb-5 mt-n5">
+            <div class="glass-card">
+                <div class="row g-4 text-center">
+                    <div class="col-md-3 col-6">
+                        <p class="stat-number" data-target="150">0</p>
+                        <p class="text-uppercase small fw-bold text-primary">Active Brands</p>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <p class="stat-number" data-target="12">0</p>
+                        <p class="text-uppercase small fw-bold text-primary">M Monthly Users</p>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <p class="stat-number" data-target="98">0</p>
+                        <p class="text-uppercase small fw-bold text-primary">ROI Accuracy %</p>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <p class="stat-number" data-target="24">0</p>
+                        <p class="text-uppercase small fw-bold text-primary">Global GEOs</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+
+        <section id="process" class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-4 fw-bold">The <span class="text-gradient">Framework</span></h2>
+                    <p>Engineered for maximum ROI and zero fraud.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="glass-card">
+                            <i class="fa-solid fa-magnifying-glass-chart fs-1 text-primary mb-4"></i>
+                            <h4>01. Deep Audit</h4>
+                            <p class="opacity-75">We scan your funnel for leakage and identify the exact audience pockets your competitors are missing.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="glass-card" style="border-color: var(--primary);">
+                            <i class="fa-solid fa-microchip fs-1 text-primary mb-4"></i>
+                            <h4>02. Matchmaking</h4>
+                            <p class="opacity-75">Our proprietary SDK matches your offer with our top-tier internal traffic sources in real-time.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="glass-card">
+                            <i class="fa-solid fa-rocket fs-1 text-primary mb-4"></i>
+                            <h4>03. Hyper Scale</h4>
+                            <p class="opacity-75">Once the KPI hits, we open the floodgates across 50+ traffic sources globally with 24/7 monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="glass-card p-0 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-lg-6 p-5 bg-primary bg-opacity-10 d-flex flex-column justify-content-center">
+                            <h2 class="display-5 fw-bold mb-4">Start Scaling <br>Today.</h2>
+                            <p class="mb-5">Our Growth Leads are ready to build your custom 90-day roadmap. No fluff, just performance.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-circle-check text-primary me-3"></i>
+                                <span>Direct SDK Traffic Access</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-circle-check text-primary me-3"></i>
+                                <span>Real-time Anti-Fraud Shield</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 p-5">
+                            <form id="growthForm">
+                                <div class="mb-3">
+                                    <label class="small fw-bold mb-2">FULL NAME</label>
+                                    <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="small fw-bold mb-2">BUSINESS EMAIL</label>
+                                    <input type="email" class="form-control" id="email" placeholder="john@company.com" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="small fw-bold mb-2">MONTHLY AD SPEND</label>
+                                    <select class="form-select" id="spend">
+                                        <option value="10-50k">$10k - $50k</option>
+                                        <option value="50-200k">$50k - $200k</option>
+                                        <option value="200k+">$200k+</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn-glow w-100 py-3" id="submitBtn">Submit Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-5 text-center border-top border-secondary border-opacity-25 mt-5">
+            <div class="container">
+                <h3 class="fw-bold mb-3"><span class="text-primary">Digi</span>Formics</h3>
+                <p class="opacity-50 small">© 2026 DigiFormics Global. Built for High-Performance Brands.</p>
+            </div>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <script>
-        // 1. Change Navbar background on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.getElementById('mainNav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled', 'bg-dark');
-                nav.classList.remove('bg-transparent');
-            } else {
-                nav.classList.remove('scrolled', 'bg-dark');
-                nav.classList.add('bg-transparent');
+        // Preloader
+        window.onload = () => {
+            document.getElementById('preloader').style.opacity = '0';
+            setTimeout(() => { document.getElementById('preloader').style.display = 'none'; }, 500);
+            AOS.init({ duration: 1000, once: true });
+        };
+
+        // Navbar Scroll
+        window.onscroll = () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        };
+
+        // Particles Configuration
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#00d2ff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.3 },
+                "size": { "value": 2 },
+                "line_linked": { "enable": true, "distance": 150, "color": "#00d2ff", "opacity": 0.1, "width": 1 },
+                "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+            },
+            "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" } } },
+            "retina_detect": true
+        });
+
+        // Counter Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const end = parseInt(target.getAttribute('data-target'));
+                    let current = 0;
+                    const duration = 2000;
+                    const increment = end / (duration / 16);
+                    
+                    const update = () => {
+                        current += increment;
+                        if (current < end) {
+                            target.innerText = Math.ceil(current) + (end > 90 ? '%' : '+');
+                            requestAnimationFrame(update);
+                        } else {
+                            target.innerText = end + (end > 90 ? '%' : '+');
+                        }
+                    };
+                    update();
+                    observer.unobserve(target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number').forEach(n => observer.observe(n));
+
+        // Form Functionality
+        document.getElementById('growthForm').onsubmit = function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const name = document.getElementById('name').value;
+            
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Initializing...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                alert(`Thank you, ${name}! Your performance audit is being generated and will be sent to your email shortly.`);
+                btn.innerHTML = 'Submit Request';
+                btn.style.opacity = '1';
+                btn.disabled = false;
+                this.reset();
+            }, 2000);
+        };
+
+        // Smooth close mobile menu
+        document.querySelectorAll('.nav-link').forEach(l => {
+            l.onclick = () => {
+                const menu = document.getElementById('mainMenu');
+                if(menu.classList.contains('show')) {
+                    new bootstrap.Collapse(menu).hide();
+                }
             }
-        });
-
-        // 2. Active Link Switching (Manual fix for certain browsers)
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.navbar-collapse').classList.remove('show');
-            });
-        });
-
-        // 3. Simple Form Submission Alert (Can be expanded)
-        document.querySelectorAll('a[href="#contact"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                console.log("Contact button clicked - SEO tracking enabled");
-            });
         });
     </script>
 </body>
