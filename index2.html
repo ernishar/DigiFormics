@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>DigiFormics | Performance Growth & OEM Distribution Services</title>
-    <meta name="description" content="DigiFormics scales Sales, Leads & Installs through OEM partnerships, premium inventory, and data-driven performance media campaigns. Engineered for ROI.">
-    <meta name="keywords" content="OEM Distribution, Performance Marketing, App Installs, Lead Generation, Media Buying, DigiFormics">
-    <meta property="og:title" content="DigiFormics | Performance Engineered Ecosystems">
-    <meta property="og:description" content="Scale Sales, Leads & Installs with Precision Performance Media and OEM Networks.">
+    <meta name="title" content="DigiFormics | Performance Growth & OEM Distribution Services">
+    <meta name="description" content="Scale Sales, Leads, and App Installs through global OEM partnerships and precision performance media. DigiFormics engineers high-ROI acquisition systems.">
+    <meta name="keywords" content="OEM Distribution, Performance Marketing, App Installs, Lead Generation, Media Buying, DigiFormics, ROI Marketing, 2026 Digital Strategy">
     <meta name="robots" content="index, follow">
 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.digiformics.com/">
+    <meta property="og:title" content="DigiFormics | Performance Engineered Ecosystems">
+    <meta property="og:description" content="Scale Sales, Leads & Installs with Precision Performance Media and OEM Networks.">
+    <meta property="og:image" content="./logo.png">
+
+    <link rel="canonical" href="https://www.digiformics.com/" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +26,7 @@
         :root {
             --primary: #00d2ff;
             --secondary: #3a7bd5;
-            --dark-bg: #030305; /* Solid Deep Dark */
+            --dark-bg: #030305;
             --card-bg: rgba(255, 255, 255, 0.03);
             --border-color: rgba(255, 255, 255, 0.1);
             --accent-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
@@ -52,6 +58,7 @@
             background: var(--dark-bg);
             display: flex; justify-content: center; align-items: center;
             z-index: 9999;
+            transition: opacity 0.5s ease;
         }
 
         .text-gradient {
@@ -73,7 +80,6 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        /* Logo Area */
         .logo-img {
             height: 40px;
             width: auto;
@@ -107,6 +113,7 @@
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
+            cursor: pointer;
         }
         .btn-glow:hover {
             box-shadow: 0 0 25px rgba(0, 210, 255, 0.6);
@@ -122,9 +129,17 @@
         .form-control, .form-select {
             background: rgba(255,255,255,0.05);
             border: 1px solid var(--border-color);
-            color: black !important;
+            color: #ffffff !important;
             padding: 14px;
         }
+        .form-control:focus, .form-select:focus {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--primary);
+            box-shadow: none;
+            color: #fff !important;
+        }
+        .form-control::placeholder { color: rgba(255,255,255,0.4); }
+        .form-select option { background: #1a1a1a; color: white; }
 
         .list-check li {
             margin-bottom: 12px;
@@ -136,6 +151,8 @@
             margin-right: 12px;
             margin-top: 4px;
         }
+
+        footer { background: #010102; }
 
         @media (max-width: 991px) {
             .navbar-collapse {
@@ -180,14 +197,14 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7" data-aos="fade-right">
-                        <h1 class="display-3 fw-800 mb-4" style="font-weight: 800;">Scale Sales, Leads & Installs With <span class="text-gradient">Precision Performance Media</span></h1>
+                        <h1 class="display-3 fw-800 mb-4" style="font-weight: 800;">🔥 Scale Sales, Leads & Installs With <span class="text-gradient">Precision Performance Media</span></h1>
                         <p class="lead opacity-75 fs-4 mb-5">DigiFormics helps global brands acquire high-value customers through OEM partnerships, premium inventory placements, and data-driven performance campaigns.</p>
                         
                         <div class="row g-3 mb-5 fw-600">
-                            <div class="col-6 col-md-3"><i class="fa-solid fa-chart-line text-primary me-2"></i> Sales</div>
-                            <div class="col-6 col-md-3"><i class="fa-solid fa-mobile-screen text-primary me-2"></i> App Installs</div>
-                            <div class="col-6 col-md-3"><i class="fa-solid fa-envelope-open-text text-primary me-2"></i> Qualified Leads</div>
-                            <div class="col-6 col-md-3"><i class="fa-solid fa-arrows-rotate text-primary me-2"></i> Subscriptions</div>
+                            <div class="col-6 col-md-3">📈 Sales</div>
+                            <div class="col-6 col-md-3">📲 App Installs</div>
+                            <div class="col-6 col-md-3">📩 Qualified Leads</div>
+                            <div class="col-6 col-md-3">🔁 Subscriptions</div>
                         </div>
                         
                         <div class="d-flex flex-wrap gap-3">
@@ -219,7 +236,7 @@
                         </div>
                         <div class="col-md-4">
                             <ul class="list-unstyled list-check">
-                                <li><i class="fa-solid fa-circle-check"></i> CPM & CPS performance models</li>
+                                <li><i class="fa-solid fa-circle-check"></i> CPM, CPC, CPCV & CPV models</li>
                                 <li><i class="fa-solid fa-circle-check"></i> Advanced cohort targeting</li>
                             </ul>
                         </div>
@@ -233,96 +250,158 @@
                 </div>
             </div>
         </section>
-
+<!-- 
         <section id="services" class="py-5">
             <div class="container py-5">
                 <div class="text-center mb-5" data-aos="fade-up">
-                    <h2 class="display-4 fw-bold">🏗 Our <span class="text-gradient">Core Services</span></h2>
+                    <h2 class="display-4 fw-bold">Our <span class="text-gradient">Core Services</span></h2>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-6" data-aos="fade-up">
                         <div class="glass-card">
-                            <h4 class="fw-bold mb-3">1️⃣ Performance Media Buying</h4>
-                            <p class="opacity-75 mb-4">We execute scalable paid campaigns across Meta, Google, YouTube, and Native Networks. We don’t optimize for traffic; we optimize for profitable acquisition.</p>
+                            <h4 class="fw-bold mb-3">Performance Media Buying</h4>
+                            <p class="opacity-75 mb-4">Awareness and consideration drive across Meta, Google, YouTube, and Native Advertising Networks. We optimize for profitable acquisition.</p>
                             <ul class="list-unstyled list-check small">
-                                <li><i class="fa-solid fa-check"></i> Cohort-based targeting & Behavioral segmentation</li>
-                                <li><i class="fa-solid fa-check"></i> ROI-focused optimization</li>
-                                <li><i class="fa-solid fa-check"></i> Flexible pricing models (CPM, CPS, Performance)</li>
+                                <li><i class="fa-solid fa-check"></i> Cohort-based targeting ✔</li>
+                                <li><i class="fa-solid fa-check"></i> Behavioral segmentation ✔</li>
+                                <li><i class="fa-solid fa-check"></i> ROI-focused optimization ✔</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="glass-card border-primary border-opacity-25">
-                            <h4 class="fw-bold mb-3">2️⃣ OEM & Device-Level Distribution</h4>
-                            <p class="opacity-75 mb-4">Access users at the device ecosystem level. Leverage pre-install campaigns and gaming SDK inventories for scalable installs.</p>
-                            <p class="small text-primary fw-bold">Ideal for: Fintech, Edtech, OTT/Streaming, Gaming & Subscriptions.</p>
+                            <h4 class="fw-bold mb-3">Device-Level Distribution</h4>
+                            <p class="opacity-75 mb-4">Leverage OEM partnerships and pre-install campaigns for scalable installs. Ideal for Fintech, Edtech, and OTT apps.</p>
                             <ul class="list-unstyled list-check small">
-                                <li><i class="fa-solid fa-check"></i> OEM Partnerships & Smart device placements</li>
-                                <li><i class="fa-solid fa-check"></i> App distribution networks</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="glass-card">
-                            <h4 class="fw-bold mb-3">3️⃣ Premium Media & Inventory</h4>
-                            <p class="opacity-75 mb-4">Position your brand where attention already exists through news portals, tech websites, and high-traffic publisher ecosystems.</p>
-                            <ul class="list-unstyled list-check small">
-                                <li><i class="fa-solid fa-check"></i> Homepage banners & Sponsored placements</li>
-                                <li><i class="fa-solid fa-check"></i> Beauty & lifestyle network access</li>
-                                <li><i class="fa-solid fa-check"></i> Conversion acceleration</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="glass-card">
-                            <h4 class="fw-bold mb-3">4️⃣ Lead & Subscription Acceleration</h4>
-                            <p class="opacity-75 mb-4">Every lead is tracked. Every subscription is measured. We build structured funnels for high-quality acquisition.</p>
-                            <ul class="list-unstyled list-check small">
-                                <li><i class="fa-solid fa-check"></i> Targeted emailer & WhatsApp marketing automation</li>
-                                <li><i class="fa-solid fa-check"></i> SEO-driven traffic & Conversion-optimized funnels</li>
-                                <li><i class="fa-solid fa-check"></i> Banner-based lead campaigns</li>
+                                <li><i class="fa-solid fa-check"></i> Smart device placements</li>
+                                <li><i class="fa-solid fa-check"></i> Gaming SDK inventories</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+<section id="services" class="py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <p class="text-primary fw-bold mb-2">OUR SPECIALIZATIONS</p>
+            <h2 class="display-4 fw-bold">🏗 Complete <span class="text-gradient">Growth Services</span></h2>
+            <p class="opacity-75 mx-auto mt-3" style="max-width: 700px;">We don't just buy ads; we engineer acquisition ecosystems designed for scale and ROI accountability.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="glass-card">
+                    <div class="mb-4 text-primary fs-1"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4 class="fw-bold mb-3">Performance Media Buying</h4>
+                    <p class="opacity-75 mb-4">Strategic execution across Meta, Google, and YouTube using data-backed bidding and precision targeting to lower your CPA.</p>
+                    <ul class="list-unstyled list-check small">
+                        <li><i class="fa-solid fa-check"></i> Cohort-based targeting</li>
+                        <li><i class="fa-solid fa-check"></i> Multi-channel attribution</li>
+                        <li><i class="fa-solid fa-check"></i> Real-time ROAS optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="glass-card border-primary border-opacity-25">
+                    <div class="mb-4 text-primary fs-1"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h4 class="fw-bold mb-3">Device-Level Distribution</h4>
+                    <p class="opacity-75 mb-4">Direct partnerships with global OEMs (Xiaomi, Samsung, Oppo) for pre-installs and system-level app placements.</p>
+                    <ul class="list-unstyled list-check small">
+                        <li><i class="fa-solid fa-check"></i> Smart folder placements</li>
+                        <li><i class="fa-solid fa-check"></i> Native app store boosts</li>
+                        <li><i class="fa-solid fa-check"></i> Global OEM inventory access</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="glass-card">
+                    <div class="mb-4 text-primary fs-1"><i class="fa-solid fa-filter"></i></div>
+                    <h4 class="fw-bold mb-3">Lead & Sales Acceleration</h4>
+                    <p class="opacity-75 mb-4">Building full-funnel lead generation engines for Fintech, EdTech, and SaaS brands to drive qualified inquiries.</p>
+                    <ul class="list-unstyled list-check small">
+                        <li><i class="fa-solid fa-check"></i> High-intent search traffic</li>
+                        <li><i class="fa-solid fa-check"></i> Native content discovery</li>
+                        <li><i class="fa-solid fa-check"></i> CRM lead scoring integration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="glass-card">
+                    <div class="mb-4 text-primary fs-1"><i class="fa-solid fa-download"></i></div>
+                    <h4 class="fw-bold mb-3">App Install Growth (CPI)</h4>
+                    <p class="opacity-75 mb-4">Scaling mobile apps through high-quality SDK inventory and rewarded/non-rewarded traffic sources.</p>
+                    <ul class="list-unstyled list-check small">
+                        <li><i class="fa-solid fa-check"></i> Cost-Per-Install models</li>
+                        <li><i class="fa-solid fa-check"></i> In-app event optimization</li>
+                        <li><i class="fa-solid fa-check"></i> Fraud prevention protocols</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="glass-card">
+                    <div class="mb-4 text-primary fs-1"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h4 class="fw-bold mb-3">High-Impact Creative</h4>
+                    <p class="opacity-75 mb-4">Data-driven ad creative design. We test hooks and visuals that actually resonate with your target cohorts.</p>
+                    <ul class="list-unstyled list-check small">
+                        <li><i class="fa-solid fa-check"></i> Video ad production</li>
+                        <li><i class="fa-solid fa-check"></i> A/B creative testing</li>
+                        <li><i class="fa-solid fa-check"></i> UGC & Creator content</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="glass-card">
+                    <div class="mb-4 text-primary fs-1"><i class="fa-solid fa-database"></i></div>
+                    <h4 class="fw-bold mb-3">Performance Analytics</h4>
+                    <p class="opacity-75 mb-4">End-to-end data transparency. We track the entire user journey from the first click to final conversion.</p>
+                    <ul class="list-unstyled list-check small">
+                        <li><i class="fa-solid fa-check"></i> Custom KPI dashboards</li>
+                        <li><i class="fa-solid fa-check"></i> MMP integration assistance</li>
+                        <li><i class="fa-solid fa-check"></i> Scalable cohort analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="framework" class="py-5">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-6" data-aos="fade-right">
-                        <h2 class="display-6 fw-bold mb-5">📊 Our 4-Step <span class="text-gradient">Growth Framework</span></h2>
+                        <h2 class="display-6 fw-bold mb-5">📊 Our Growth Framework</h2>
                         <div class="mb-4">
-                            <h5>1. Audience & Cohort Mapping</h5>
+                            <h5>Audience & Cohort Mapping</h5>
                             <p class="small opacity-75">Deep data analysis to identify high-LTV users.</p>
                         </div>
                         <div class="mb-4">
-                            <h5>2. Inventory & Channel Strategy</h5>
-                            <p class="small opacity-75">Selecting the right OEM networks and placements.</p>
+                            <h5>Inventory & Channel Strategy</h5>
+                            <p class="small opacity-75">Selecting the right networks and placements.</p>
                         </div>
                         <div class="mb-4">
-                            <h5>3. Campaign Execution</h5>
-                            <p class="small opacity-75">Multi-channel deployment across paid, native & device-level media.</p>
+                            <h5>Campaign Execution</h5>
+                            <p class="small opacity-75">Multi-channel deployment across native & device-level media.</p>
                         </div>
                         <div class="mb-4">
-                            <h5>4. Optimization & Scaling</h5>
-                            <p class="small opacity-75">Refinement to lower CAC and increase ROI.</p>
+                            <h5>Optimization & Scaling</h5>
+                            <p class="small opacity-75">Continuous performance refinement to lower CAC.</p>
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
                         <div class="glass-card">
                             <h4 class="fw-bold mb-4">💼 Why DigiFormics?</h4>
                             <ul class="list-unstyled list-check">
-                                <li><i class="fa-solid fa-shield-check"></i> Access to premium global inventory</li>
-                                <li><i class="fa-solid fa-shield-check"></i> OEM-level distribution capabilities</li>
-                                <li><i class="fa-solid fa-shield-check"></i> Advanced cohort targeting & Pricing flexibility</li>
-                                <li><i class="fa-solid fa-shield-check"></i> Global campaign management</li>
+                                <li><i class="fa-solid fa-shield-check"></i> Premium global inventory access</li>
+                                <li><i class="fa-solid fa-shield-check"></i> OEM-level distribution</li>
+                                <li><i class="fa-solid fa-shield-check"></i> Performance pricing flexibility</li>
+                                <li><i class="fa-solid fa-shield-check"></i> Predictable growth metrics</li>
                             </ul>
-                            <div class="mt-5 p-3 rounded-3 border border-primary border-opacity-25">
-                                <h5 class="text-primary">📈 What You Can Expect</h5>
-                                <p class="small mb-0">Lower CAC | Higher Quality Users | Increased LTV | Predictable Growth</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -334,30 +413,31 @@
                 <div class="glass-card p-0 overflow-hidden">
                     <div class="row g-0">
                         <div class="col-lg-6 p-5 bg-primary bg-opacity-10 d-flex flex-column justify-content-center">
-                            <h2 class="display-5 fw-bold mb-4">Ready to Scale Beyond Traditional Media?</h2>
-                            <p class="mb-5">Let’s build a performance strategy tailored to your growth objectives. We don’t just run ads—we engineer acquisition systems.</p>
+                            <h2 class="display-5 fw-bold mb-4">🎯 Ready to Scale Beyond Traditional Media?</h2>
+                            <p class="mb-5">Let’s build a performance strategy tailored to your growth objectives. 📩 Contact DigiFormics Today.</p>
                         </div>
                         <div class="col-lg-6 p-5">
-                            <form id="growthForm">
+                            <form action="https://formspree.io/f/Priyanshu@digiformics.com" method="POST" id="growthForm">
                                 <div class="mb-3">
-                                    <label class="small fw-bold mb-2">NAME</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+                                    <label class="small fw-bold mb-2">FULL NAME</label>
+                                    <input type="text" name="name" class="form-control" placeholder="John Doe" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="small fw-bold mb-2">EMAIL</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Business Email" required>
+                                    <label class="small fw-bold mb-2">BUSINESS EMAIL</label>
+                                    <input type="email" name="email" class="form-control" placeholder="john@brand.com" required>
                                 </div>
                                 <div class="mb-4">
-                                    <label class="small fw-bold mb-2">INTERESTED SERVICE</label>
-                                    <select class="form-select">
-                                        <option>OEM Distribution</option>
-                                        <option>Media Buying</option>
-                                        <option>Lead Generation</option>
-                                        <option>All Services</option>
+                                    <label class="small fw-bold mb-2">PRIMARY GOAL</label>
+                                    <select name="goal" class="form-select">
+                                        <option value="App Installs">App Installs & Mobile</option>
+                                        <option value="Lead Generation">Lead Generation</option>
+                                        <option value="OEM Distribution">OEM Distribution</option>
+                                        <option value="Media Buying">Media Buying</option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn-glow w-100 py-3" id="submitBtn">📩 Contact DigiFormics Today</button>
+                                <button type="submit" class="btn-glow w-100 py-3" id="submitBtn">📩 Send Inquiry</button>
                             </form>
+                            <div id="formStatus" class="mt-3 text-center small fw-bold" style="display:none;"></div>
                         </div>
                     </div>
                 </div>
@@ -377,11 +457,12 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
-        window.onload = () => {
-            document.getElementById('preloader').style.opacity = '0';
-            setTimeout(() => { document.getElementById('preloader').style.display = 'none'; }, 500);
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => { preloader.style.display = 'none'; }, 500);
             AOS.init({ duration: 1000, once: true });
-        };
+        });
 
         window.onscroll = () => {
             const nav = document.getElementById('navbar');
@@ -403,16 +484,42 @@
             "retina_detect": true
         });
 
-        document.getElementById('growthForm').onsubmit = function(e) {
-            e.preventDefault();
+        // Formspree Handling
+        const form = document.getElementById("growthForm");
+        const status = document.getElementById("formStatus");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
             const btn = document.getElementById('submitBtn');
             btn.innerHTML = 'Sending...';
-            setTimeout(() => {
-                alert('Thank you! Our Growth Engineers will contact you shortly.');
-                btn.innerHTML = '📩 Contact DigiFormics Today';
-                this.reset();
-            }, 1500);
-        };
+            btn.disabled = true;
+
+            const data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "✅ SUCCESS! Our Growth Engineers will contact you shortly.";
+                    status.style.display = "block";
+                    status.style.color = "#00d2ff";
+                    form.reset();
+                    btn.innerHTML = '📩 INQUIRY SENT';
+                } else {
+                    status.innerHTML = "❌ Error submitting. Please check your details.";
+                    status.style.display = "block";
+                    status.style.color = "#ff4d4d";
+                    btn.disabled = false;
+                    btn.innerHTML = 'Try Again';
+                }
+            }).catch(error => {
+                status.innerHTML = "❌ Network error. Please try again.";
+                status.style.display = "block";
+                btn.disabled = false;
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
     </script>
 </body>
 </html>
